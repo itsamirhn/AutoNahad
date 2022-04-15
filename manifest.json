@@ -1,0 +1,32 @@
+{
+  "name": "AutoNahad",
+  "version": "1.0.0",
+  "description": "Solve Nahad Exams",
+  "manifest_version": 3,
+  "author": "AmirMohammad Hosseini Nasab",
+  "action":{
+    "default_popup": "index.html",
+    "default_title": "AutoNahad"
+  },
+  "content_scripts": [{
+    "js": [
+      "content.js"
+    ],
+    "matches": [
+      "https://maaref.ecnahad.ir/*"
+    ]
+  }],
+  "web_accessible_resources": [{
+    "resources": [
+      "inject.js"
+    ],
+    "matches": [
+      "https://maaref.ecnahad.ir/*"
+    ]
+  }],
+  "permissions": [
+    "scripting",
+    "tabs",
+    "activeTab"
+  ]
+}
