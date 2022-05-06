@@ -1,8 +1,12 @@
 # AutoNahad
+![Chrome](https://badgen.net/badge/icon/chrome?icon=chrome&label&color=cyan)
+![Lastest Tag](https://badgen.net/github/tag/itsamirhn/AutoNahad?color=orange)
+
+
 Tired of solving [maaref.ecnahad.ir](https://maaref.ecnahad.ir) exams? Use **AutoNahad** to solve it automatically...
 
 ## Usage for Chrome
-- Install this project as Chrom Extension in your Chrome.
+- Install this project as Chrome Extension in your Chrome.
 - In the exam page, when the questions are shown, press **Solve** button in **AutoNahad** chrome extension.
 - Wait for the "Done!" alert, then finish the exam.
 
