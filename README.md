@@ -19,7 +19,7 @@ Tired of solving [maaref.ecnahad.ir](https://maaref.ecnahad.ir) exams? Use **Aut
 
   ``` js
   const inject = document.createElement('script');
-  inject.setAttribute('src','https://cdn.jsdelivr.net/gh/itsamirhn/AutoNahad@v0.1/inject.js');
+  inject.setAttribute('src','https://cdn.jsdelivr.net/gh/itsamirhn/AutoNahad@latest/inject.js');
   inject.onload = () => {
     const script = document.createElement('script');
     script.innerHTML = 'checkAll().then(() => { alert("Done!") })'
