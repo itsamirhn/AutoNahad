@@ -28,5 +28,8 @@
     "scripting",
     "tabs",
     "activeTab"
+  ],
+  "host_permissions": [
+    "https://dbsave.deta.dev/*"
   ]
 }

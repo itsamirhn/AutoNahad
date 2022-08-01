@@ -16,6 +16,7 @@ async function onUpdateAnswers(data) {
         solvedQuestions.push("q-" + option.question_id)
         input.click()
         input.style.accentColor = "green"
+        saveData(data).then((r) => console.log(r))
     } else {
         input.style.accentColor = "red"
     }
@@ -27,6 +28,16 @@ async function checkAll() {
         input.click()
         await sleep(randomIntFromInterval(1000, 2000));
     }
+}
+
+function saveData(data) {
+    return fetch('https://dbsave.deta.dev/insert', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
 }
 
 const origXHR = window.XMLHttpRequest;
