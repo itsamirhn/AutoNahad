@@ -6,23 +6,28 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function checkAll() {
-    for (const input of document.querySelectorAll(`input[type="radio"]`)) {
-        if (submittedAnswers.includes(input.name)) { continue }
+const solvedQuestions = []
+
+async function onUpdateAnswers(data) {
+    const option = data.option[0]
+    const answerId = option.id
+    const input = document.querySelector(`input[type="radio"][value="${answerId}"]`)
+    if (option.is_correct) {
+        solvedQuestions.push("q-" + option.question_id)
         input.click()
+        input.style.accentColor = "green"
+    } else {
         input.style.accentColor = "red"
-        await sleep(randomIntFromInterval(1000, 2000));
     }
 }
 
-async function answer(id, sleepTime) {
-    const input = document.querySelector(`input[type="radio"][value="${id}"]`)
-    input.click()
-    input.style.accentColor = "green"
-    await sleep(sleepTime);
+async function checkAll() {
+    for (const input of document.querySelectorAll(`input[type="radio"]`)) {
+        if (solvedQuestions.includes(input.name)) { continue }
+        input.click()
+        await sleep(randomIntFromInterval(1000, 2000));
+    }
 }
-
-const submittedAnswers = []
 
 const origXHR = window.XMLHttpRequest;
 window.XMLHttpRequest = function() {
@@ -31,11 +36,7 @@ window.XMLHttpRequest = function() {
         xhr.addEventListener('load', async function (event) {
             if (url.indexOf('update-answers') > -1) {
                 const data = JSON.parse(event.target.responseText).data;
-                const option = data.option[0]
-                if (option.is_correct) {
-                    submittedAnswers.push("q-" + option.question_id)
-                    await answer(option.id)
-                }
+                await onUpdateAnswers(data);
             }
         });
         origXHR.prototype.open.call(xhr, method, url);

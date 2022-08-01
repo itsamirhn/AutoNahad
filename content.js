@@ -1,4 +1,4 @@
-var s = document.createElement('script');
+const s = document.createElement('script');
 s.src = chrome.runtime.getURL('inject.js');
 s.onload = function() {
     this.remove();
