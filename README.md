@@ -1,7 +1,12 @@
 # AutoNahad
 ![Chrome](https://badgen.net/badge/icon/chrome?icon=chrome&label&color=cyan)
 ![Lastest Tag](https://badgen.net/github/tag/itsamirhn/AutoNahad?color=orange)
-![Manual Usage Count](https://badgen.net/jsdelivr/hits/gh/itsamirhn/AutoNahad?color=yellow)
+
+<div dir="rtl">
+
+برای توضیحات فارسی به [اینجا](README.fa.md) مراجعه کنید.
+
+</div>
 
 AutoNahad is a tool that helps you to solve [maaref.ecnahad.ir](https://maaref.ecnahad.ir) exams.
 It will solve all problems automatically or if you choose manually, it will show you the correctness of your answer (with red or green color).
