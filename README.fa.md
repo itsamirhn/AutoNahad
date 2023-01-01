@@ -14,6 +14,8 @@ For English documentation, see [here](README.md).
 «اتو نهاد» یه ابزاره که بهتون کمک میکنه سوالای امتحان سایت [maaref.ecnahad.ir](https://maaref.ecnahad.ir) رو حل کنید.
 این برنامه به صورت خودکار همه سوال‌هارو حل میکنه ولی اگه میخواین به صورت دستی از این ابزار استفاده کنین، هنگام وارد گزینه‌ها در امتحان، درست یا غلط بودن اون رو با رنگ سبزو قرمز نشون میده.
 
+  # متاسفانه این کد دیگر کار نمیکند!
+  
 ### نمونه
 ![Sample gif](https://raw.githubusercontent.com/itsamirhn/AutoNahad/master/sample.gif)
 
